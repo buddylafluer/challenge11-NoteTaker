@@ -3,7 +3,6 @@ const { notes } = require('../../db/db.json');
 const uuid = require('uuid');
 const fs = require("fs");
 const path = require('path');
-const { route } = require('express/lib/application');
 
 router.get('/notes', (req, res) => {
   const notes = fs.readFileSync(path.join(__dirname, '../../db/db.json'), 'utf8');
